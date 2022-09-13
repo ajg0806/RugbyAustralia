@@ -5,6 +5,7 @@ using RugbyAustralia.DomainModel.Dtos;
 using RugbyAustralia.DomainModel.Models;
 using RugbyAustralia.DomainModel.Queries;
 using RugbyAustralia.DomainModel.Repositories;
+using RugbyAustralia.InfrastructureServices;
 using System;
 using System.Collections.Generic;
 

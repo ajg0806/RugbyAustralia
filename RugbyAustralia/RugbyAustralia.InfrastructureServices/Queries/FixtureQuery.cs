@@ -16,7 +16,7 @@ namespace RugbyAustralia.InfrastructureServices.Queries
             List<FixtureDto> fixtures;
 
             using (var reader = new StreamReader(filepath))
-            using (var csv = new CsvReader(reader, System.Globalization.CultureInfo.CreateSpecificCulture("enUS")))
+            using (var csv = new CsvReader(reader, System.Globalization.CultureInfo.CurrentCulture))
             {
                 fixtures = csv.GetRecords<FixtureDto>().ToList();
             }

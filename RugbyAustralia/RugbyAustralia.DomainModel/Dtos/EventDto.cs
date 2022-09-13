@@ -42,6 +42,6 @@ namespace RugbyAustralia.DomainModel.Dtos
         [Name("qualifier5")]
         public string qualifier5 {get; set;}
         [Name("value")]
-        public int value {get; set;}
+        public string value {get; set;}
     }
 }

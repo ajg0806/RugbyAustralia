@@ -1,5 +1,4 @@
-﻿using RugbyAustralia.DomainModel;
-using RugbyAustralia.DomainModel.Dtos;
+﻿using RugbyAustralia.DomainModel.Dtos;
 using RugbyAustralia.DomainModel.Queries;
 using RugbyAustralia.DomainModel.Repositories;
 using System;
@@ -7,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using RugbyAustralia.DomainModel.Mappers;
 
-namespace RugbyAustralia.InfrastructureServices
+namespace RugbyAustralia.DomainModel
 {
     public class ImporterExporter : IImporterExporter
     {

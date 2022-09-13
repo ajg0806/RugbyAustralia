@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RugbyAustralia.DomainModel\RugbyAustralia.DomainModel.csproj" />
+    <ProjectReference Include="..\RugbyAustralia.InfrastructureServices\RugbyAustralia.InfrastructureServices.csproj" />
   </ItemGroup>
 
 </Project>

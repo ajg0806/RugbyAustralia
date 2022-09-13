@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/RugbyAustralia/RugbsyAustralia.ApplicationServices/bin/Debug/netcoreapp3.1
+/RugbyAustralia/RugbyAustralia.DomainModel/obj/Debug/netcoreapp3.1/RugbyAustralia.DomainModel.dll

@@ -1,4 +1,0 @@
-C:\Users\grabs\source\github_repos\RugbyAustralia\RugbyAustralia\RugbyAustralia.CrossCuttingConcerns\obj\Debug\netcoreapp3.1\RugbyAustralia.CrossCuttingConcerns.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\grabs\source\github_repos\RugbyAustralia\RugbyAustralia\RugbyAustralia.CrossCuttingConcerns\obj\Debug\netcoreapp3.1\RugbyAustralia.CrossCuttingConcerns.AssemblyInfoInputs.cache
-C:\Users\grabs\source\github_repos\RugbyAustralia\RugbyAustralia\RugbyAustralia.CrossCuttingConcerns\obj\Debug\netcoreapp3.1\RugbyAustralia.CrossCuttingConcerns.AssemblyInfo.cs
-C:\Users\grabs\source\github_repos\RugbyAustralia\RugbyAustralia\RugbyAustralia.CrossCuttingConcerns\obj\Debug\netcoreapp3.1\RugbyAustralia.CrossCuttingConcerns.csproj.CoreCompileInputs.cache
