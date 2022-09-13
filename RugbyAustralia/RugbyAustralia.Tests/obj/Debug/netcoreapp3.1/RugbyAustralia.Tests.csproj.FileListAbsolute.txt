@@ -1,0 +1,6 @@
+C:\Users\grabs\source\github_repos\RugbyAustralia\RugbyAustralia\RugbyAustralia.Tests\bin\Debug\netcoreapp3.1\CoverletSourceRootsMapping
+C:\Users\grabs\source\github_repos\RugbyAustralia\RugbyAustralia\RugbyAustralia.Tests\obj\Debug\netcoreapp3.1\RugbyAustralia.Tests.csproj.AssemblyReference.cache
+C:\Users\grabs\source\github_repos\RugbyAustralia\RugbyAustralia\RugbyAustralia.Tests\obj\Debug\netcoreapp3.1\RugbyAustralia.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\grabs\source\github_repos\RugbyAustralia\RugbyAustralia\RugbyAustralia.Tests\obj\Debug\netcoreapp3.1\RugbyAustralia.Tests.AssemblyInfoInputs.cache
+C:\Users\grabs\source\github_repos\RugbyAustralia\RugbyAustralia\RugbyAustralia.Tests\obj\Debug\netcoreapp3.1\RugbyAustralia.Tests.AssemblyInfo.cs
+C:\Users\grabs\source\github_repos\RugbyAustralia\RugbyAustralia\RugbyAustralia.Tests\obj\Debug\netcoreapp3.1\RugbyAustralia.Tests.csproj.CoreCompileInputs.cache

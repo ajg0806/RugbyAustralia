@@ -1,0 +1,4 @@
+C:\Users\grabs\source\github_repos\RugbyAustralia\RugbyAustralia\RugbsyAustralia.ApplicationServices\obj\Debug\netcoreapp3.1\RugbsyAustralia.ApplicationServices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\grabs\source\github_repos\RugbyAustralia\RugbyAustralia\RugbsyAustralia.ApplicationServices\obj\Debug\netcoreapp3.1\RugbsyAustralia.ApplicationServices.AssemblyInfoInputs.cache
+C:\Users\grabs\source\github_repos\RugbyAustralia\RugbyAustralia\RugbsyAustralia.ApplicationServices\obj\Debug\netcoreapp3.1\RugbsyAustralia.ApplicationServices.AssemblyInfo.cs
+C:\Users\grabs\source\github_repos\RugbyAustralia\RugbyAustralia\RugbsyAustralia.ApplicationServices\obj\Debug\netcoreapp3.1\RugbsyAustralia.ApplicationServices.csproj.CoreCompileInputs.cache
