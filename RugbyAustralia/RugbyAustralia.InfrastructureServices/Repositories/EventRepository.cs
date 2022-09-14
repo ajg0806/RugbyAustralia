@@ -8,18 +8,17 @@ using System.Text;
 
 namespace RugbyAustralia.InfrastructureServices.Repositories
 {
-    public class FixtureRepository : IFixtureRepository
+    public class EventRepository : IEventRepository
     {
-        protected readonly DbSet<Fixture> DbSet;
+        protected readonly DbSet<Event> DbSet;
 
-        public FixtureRepository(RugbyAustraliaContext context)
+        public EventRepository(RugbyAustraliaContext context)
         {
-            DbSet = context.Fixtures;
+            DbSet = context.Events;
         }
-
-        public void BulkInsert(IEnumerable<Fixture> fixtures)
+        public void BulkInsert(IEnumerable<Event> events)
         {
-            DbSet.AddRange(fixtures);
+            DbSet.AddRange(events);
         }
     }
 }

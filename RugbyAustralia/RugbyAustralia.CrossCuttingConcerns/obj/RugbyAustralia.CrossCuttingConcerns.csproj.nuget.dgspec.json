@@ -192,6 +192,10 @@
             "CsvHelper": {
               "target": "Package",
               "version": "[28.0.1, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
             }
           },
           "imports": [

@@ -20,6 +20,7 @@ namespace RugbyAustralia.DomainModel
         private IEnumerable<EventDto> _eventDtos;
         private IEnumerable<FixtureDto> _fixtureDtos;
         private IEnumerable<PlayerDto> _playerDtos;
+        private IUnitOfWork _unitOfWork;
 
         public ImporterExporter(
               IEventQuery eventQuery
@@ -29,7 +30,7 @@ namespace RugbyAustralia.DomainModel
             , IFixtureRepository fixtureRepository
             , IPlayerRepository playerRepository
             , IDirectoryManager directoryManager
-            )
+            , IUnitOfWork unitOfWork)
         {
             _eventQuery = eventQuery;
             _fixtureQuery = fixtureQuery;
@@ -39,6 +40,7 @@ namespace RugbyAustralia.DomainModel
             _playerRepository = playerRepository;
             _directoryManager = directoryManager;
             _directoryManager.SetRootPath(@"C:\Users\grabs\Documents\SoftwareDataEngineerTask");
+            _unitOfWork = unitOfWork;
         }
         public void ImportData()
         {
@@ -64,8 +66,11 @@ namespace RugbyAustralia.DomainModel
         public void ExportData()
         {
             _eventRepository.BulkInsert(_eventDtos.Select(x => EventMapper.Map(x)).ToList());
+            _unitOfWork.Save();
             _fixtureRepository.BulkInsert(_fixtureDtos.Select(x => FixtureMapper.Map(x)).ToList());
+            _unitOfWork.Save();
             _playerRepository.BulkInsert(_playerDtos.Select(x => PlayerMapper.Map(x)).ToList());
+            _unitOfWork.Save();
         }
     }
 }

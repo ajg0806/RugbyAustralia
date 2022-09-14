@@ -1,7 +1,10 @@
 ﻿using RugbyAustralia.CrossCuttingConcerns;
 using RugbyAustralia.DomainModel;
+using RugbyAustralia.DomainModel.Models;
 using RugbyAustralia.DomainModel.Queries;
+using RugbyAustralia.DomainModel.Repositories;
 using System;
+using System.Collections.Generic;
 
 namespace RugbsyAustralia.ApplicationServices
 {
@@ -10,7 +13,9 @@ namespace RugbsyAustralia.ApplicationServices
         static void Main(string[] args)
         {
             CompositionRoot.Configure();
-            CompositionRoot.GetInstance<IImporterExporter>().ImportData();
+            var ImporterExporter = CompositionRoot.GetInstance<IImporterExporter>();
+            ImporterExporter.ImportData();
+            ImporterExporter.ExportData();
         }
     }
 }

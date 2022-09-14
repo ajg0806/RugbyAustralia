@@ -10,7 +10,11 @@ namespace RugbyAustralia.DomainModel.Mappers
     {
         public static Player Map(PlayerDto dto)
         {
-            return new Player();
+            return new Player 
+            { 
+                Player_Mid = dto.player_mid,
+                Player_Name = dto.player_name
+            };
         }
     }
 }

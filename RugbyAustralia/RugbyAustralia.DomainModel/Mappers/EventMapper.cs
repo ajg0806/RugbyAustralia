@@ -10,7 +10,26 @@ namespace RugbyAustralia.DomainModel.Mappers
     {
         public static Event Map(EventDto dto)
         {
-            return new Event();
+            return new Event
+            {
+                Fixture_Id = dto.fixture_id,
+                Fixture_Event_Id = dto.fixture_event_id,
+                Match_Half = dto.match_half,
+                Match_Time = dto.match_time,
+                Team = dto.team,
+                Player_Id = dto.player_id,
+                Position_Number = dto.position_number,
+                Shirt_Number = dto.shirt_number,
+                Possession_Number = dto.possession_number,
+                Phase_Number = dto.phase_number,
+                EvEnt = dto.evnt,
+                Eventtype = dto.eventtype,
+                Eventresult = dto.eventresult,
+                Qualifier3 = dto.qualifier3,
+                Qualifier4 = dto.qualifier4,
+                Qualifier5 = dto.qualifier5,
+                Value = dto.value
+            };
         }
     }
 }
