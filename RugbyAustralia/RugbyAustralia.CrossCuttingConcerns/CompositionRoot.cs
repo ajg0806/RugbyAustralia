@@ -8,6 +8,8 @@ using RugbyAustralia.InfrastructureServices.Repositories;
 using RugbyAustralia.DomainModel;
 using RugbyAustralia.InfrastructureServices;
 using RugbyAustralia.InfrastructureServices.Contexts;
+using System.Data.Common;
+using System.Data.SqlClient;
 
 namespace RugbyAustralia.CrossCuttingConcerns
 {
@@ -16,9 +18,12 @@ namespace RugbyAustralia.CrossCuttingConcerns
         private static IContainer Container;
         public static void Configure()
         {
-            RugbyAustraliaContext context = new RugbyAustraliaContext("server=(local)\\MySQL80;Initial Catalog=RugbyAustralia;User id=root;Password=Ajg201199");
+            SqlConnection conn = new SqlConnection("server=(local);database=RugbyAustralia;trusted_connection=true;");
             Container = new Container( config => 
             {
+                config.For<DbConnection>().Use(conn);
+                config.For<RugbyAustraliaContext>().Use<RugbyAustraliaContext>();
+                config.For<IUnitOfWork>().Use<UnitOfWork>();
                 config.For<IDirectoryManager>().Use<DirectoryManager>();
                 config.For<IEventQuery>().Use<EventQuery>();
                 config.For<IFixtureQuery>().Use<FixtureQuery>();
@@ -27,8 +32,6 @@ namespace RugbyAustralia.CrossCuttingConcerns
                 config.For<IFixtureRepository>().Use<FixtureRepository>();
                 config.For<IPlayerRepository>().Use<PlayerRepository>();
                 config.For<IImporterExporter>().Use<ImporterExporter>();
-                config.For<RugbyAustraliaContext>().Use(context);
-                config.For<IUnitOfWork>().Use<UnitOfWork>();
             });
         }
         public static T GetInstance<T>()

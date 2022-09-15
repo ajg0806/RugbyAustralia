@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="C:\Users\grabs\.nuget\packages\mysql.data.entityframework\8.0.30\contentFiles\any\netstandard2.1\app.config.transform" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CsvHelper" Version="28.0.1" />
     <PackageReference Include="EntityFramework" Version="6.4.4" />
   </ItemGroup>

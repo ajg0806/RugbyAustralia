@@ -8,5 +8,6 @@ namespace RugbyAustralia.DomainModel.Repositories
     public interface IPlayerRepository
     {
         void BulkInsert(IEnumerable<Player> player);
+        void Insert(Player player);
     }
 }

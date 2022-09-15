@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RugbyAustralia.DomainModel"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RugbsyAustralia.ApplicationServices", "RugbsyAustralia.ApplicationServices\RugbsyAustralia.ApplicationServices.csproj", "{14B5935A-6C24-4666-BD99-5E05A505C5EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RugbyAustralia.Tests", "RugbyAustralia.Tests\RugbyAustralia.Tests.csproj", "{573ACD99-B6C9-4398-8D48-DA9206058455}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RugbyAustralia.Tests", "RugbyAustralia.Tests\RugbyAustralia.Tests.csproj", "{573ACD99-B6C9-4398-8D48-DA9206058455}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RugbyAustralia.InfrastructureServices", "RugbyAustralia.InfrastructureServices\RugbyAustralia.InfrastructureServices.csproj", "{0115CFF8-2494-429D-B570-EA12980295EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RugbyAustralia.InfrastructureServices", "RugbyAustralia.InfrastructureServices\RugbyAustralia.InfrastructureServices.csproj", "{0115CFF8-2494-429D-B570-EA12980295EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RugbyAustralia.CrossCuttingConcerns", "RugbyAustralia.CrossCuttingConcerns\RugbyAustralia.CrossCuttingConcerns.csproj", "{2917633F-143F-4A01-911A-C2EDEC7B3232}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RugbyAustralia.CrossCuttingConcerns", "RugbyAustralia.CrossCuttingConcerns\RugbyAustralia.CrossCuttingConcerns.csproj", "{2917633F-143F-4A01-911A-C2EDEC7B3232}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -4,3 +4,14 @@
 
 /RugbyAustralia/RugbsyAustralia.ApplicationServices/bin/Debug/netcoreapp3.1
 /RugbyAustralia/RugbyAustralia.DomainModel/obj/Debug/netcoreapp3.1/RugbyAustralia.DomainModel.dll
+/RugbyAustralia/RugbsyAustralia.ApplicationServices/obj
+/RugbyAustralia/RugbyAustralia.CrossCuttingConcerns/bin/Debug/netcoreapp3.1
+/RugbyAustralia/RugbyAustralia.CrossCuttingConcerns/obj
+/RugbyAustralia/RugbyAustralia.DomainModel/bin/Debug/netcoreapp3.1
+/RugbyAustralia/RugbyAustralia.DomainModel/obj
+/RugbyAustralia/RugbyAustralia.InfrastructureServices/bin/Debug/netcoreapp3.1
+/RugbyAustralia/RugbyAustralia.InfrastructureServices/obj
+/RugbyAustralia/RugbyAustralia.Tests/obj
+/RugbyAustralia/.vs/RugbyAustralia/v16
+*.v2
+RugbyAustralia/RugbyAustralia.InfrastructureServices/app.config

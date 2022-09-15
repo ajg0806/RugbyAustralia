@@ -45,18 +45,18 @@ namespace RugbyAustralia.DomainModel
         public void ImportData()
         {
             if (!(_directoryManager.PlayersFileExists()))
-                throw new ArgumentNullException("");
+                throw new ArgumentNullException("Player file does not exist.");
             if (!_directoryManager.FixturesFileExists())
-                throw new ArgumentNullException("");
+                throw new ArgumentNullException("Fixture file does not exist.");
             if (!_directoryManager.EventsFolderExists())
             {
                 if (_directoryManager.EventsArchiveExists())
                     _directoryManager.UnzipEventsArchive();
                 else
-                    throw new ArgumentNullException("");
+                    throw new ArgumentNullException("Event archive does not exist.");
             }
             if(!_directoryManager.EventsFileExists())
-                throw new ArgumentNullException("");
+                throw new ArgumentNullException("Event file does not exist.");
 
             string root = _directoryManager.GetRootPath();
                 _fixtureDtos = _fixtureQuery.RetriveFixtures($"{root}\\fixtures.csv");
@@ -65,12 +65,9 @@ namespace RugbyAustralia.DomainModel
         }
         public void ExportData()
         {
-            _eventRepository.BulkInsert(_eventDtos.Select(x => EventMapper.Map(x)).ToList());
-            _unitOfWork.Save();
-            _fixtureRepository.BulkInsert(_fixtureDtos.Select(x => FixtureMapper.Map(x)).ToList());
-            _unitOfWork.Save();
-            _playerRepository.BulkInsert(_playerDtos.Select(x => PlayerMapper.Map(x)).ToList());
-            _unitOfWork.Save();
+            _fixtureDtos.ToList().ForEach(x => _fixtureRepository.Insert(FixtureMapper.Map(x)));
+            _playerDtos.ToList().ForEach(x => _playerRepository.Insert(PlayerMapper.Map(x)));
+            _eventDtos.ToList().ForEach(x => _eventRepository.Insert(EventMapper.Map(x)));
         }
     }
 }
