@@ -25,6 +25,6 @@ namespace RugbyAustralia.DomainModel.Models
         public string Qualifier3 {get; set;}
         public string Qualifier4 {get; set;}
         public string Qualifier5 {get; set;}
-        public string Value {get; set;}
+        public int Value {get; set;}
     }
 }

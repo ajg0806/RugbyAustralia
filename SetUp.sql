@@ -31,7 +31,7 @@ CREATE TABLE Event (
         Qualifier3 VARCHAR(128) NOT NULL,
         Qualifier4 VARCHAR(128) NOT NULL,
         Qualifier5 VARCHAR(128) NOT NULL,
-        Value VARCHAR(128) NOT NULL,
+        Value INT NOT NULL,
 		CONSTRAINT PK_Fixture_Event_Id PRIMARY KEY CLUSTERED (Fixture_Id, Fixture_Event_Id),
 		CONSTRAINT FK_Event_FixtureId FOREIGN KEY (Fixture_Id) REFERENCES Fixture (Fixture_Mid),
 		CONSTRAINT FK_Event_PlayerId FOREIGN KEY (Player_Id) REFERENCES Player (Player_Mid)

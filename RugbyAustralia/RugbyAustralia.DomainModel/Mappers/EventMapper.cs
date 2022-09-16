@@ -2,6 +2,7 @@
 using RugbyAustralia.DomainModel.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace RugbyAustralia.DomainModel.Mappers
@@ -10,6 +11,16 @@ namespace RugbyAustralia.DomainModel.Mappers
     {
         public static Event Map(EventDto dto)
         {
+            int value;
+            try
+            {
+                value = Int32.Parse(dto.value);
+            }
+            catch (Exception ex)
+            {
+                value = 0;
+
+            }
             return new Event
             {
                 Fixture_Id = dto.fixture_id,
@@ -28,7 +39,7 @@ namespace RugbyAustralia.DomainModel.Mappers
                 Qualifier3 = dto.qualifier3,
                 Qualifier4 = dto.qualifier4,
                 Qualifier5 = dto.qualifier5,
-                Value = dto.value
+                Value = value
             };
         }
     }
