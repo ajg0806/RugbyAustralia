@@ -7,7 +7,6 @@ namespace RugbyAustralia.DomainModel.Repositories
 {
     public interface IEventRepository
     {
-        void BulkInsert(IEnumerable<Event> evnt);
-        void Insert(Event @event);
+        void BulkInsert(IEnumerable<Event> events);
     }
 }

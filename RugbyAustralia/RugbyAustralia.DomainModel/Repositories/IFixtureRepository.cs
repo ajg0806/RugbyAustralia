@@ -8,6 +8,5 @@ namespace RugbyAustralia.DomainModel.Repositories
     public interface IFixtureRepository
     {
         void BulkInsert(IEnumerable<Fixture> fixture);
-        void Insert(Fixture fixture);
     }
 }

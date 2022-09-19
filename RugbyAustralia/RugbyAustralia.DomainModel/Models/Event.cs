@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace RugbyAustralia.DomainModel.Models
@@ -8,7 +9,10 @@ namespace RugbyAustralia.DomainModel.Models
     public class Event
     {
         [Key]
+        [Column(Order = 1)]
         public string Fixture_Id {get; set;}
+        [Key]
+        [Column(Order = 2)]
         public int Fixture_Event_Id {get; set;}
         public int Match_Half {get; set;}
         public int Match_Time {get; set;}
@@ -26,5 +30,9 @@ namespace RugbyAustralia.DomainModel.Models
         public string Qualifier4 {get; set;}
         public string Qualifier5 {get; set;}
         public int Value {get; set;}
+        [ForeignKey("Fixture_Id")]
+        public virtual Fixture Fixture { get; set; }
+        [ForeignKey("Player_Id")]
+        public virtual Player Player { get; set; }
     }
 }

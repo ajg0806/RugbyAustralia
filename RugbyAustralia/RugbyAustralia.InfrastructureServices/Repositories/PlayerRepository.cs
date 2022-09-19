@@ -21,25 +21,5 @@ namespace RugbyAustralia.InfrastructureServices.Repositories
         {
             DbSet.AddRange(players);
         }
-
-        public void Insert(Player player)
-        {
-
-            using SqlConnection connection = new SqlConnection("server=(local);database=RugbyAustralia;trusted_connection=true;");
-            string query = "INSERT INTO Player (Player_Mid, Player_Name) VALUES (@Player_Mid, @Player_Name);";
-
-            using SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@Player_Mid", player.Player_Mid);
-            command.Parameters.AddWithValue("@Player_Name", player.Player_Name);
-
-            connection.Open();
-            int result = command.ExecuteNonQuery();
-
-            // Check Error
-            if (result < 0)
-                Console.WriteLine("Error inserting data into Database!");
-
-            connection.Close();
-        }
     }
 }

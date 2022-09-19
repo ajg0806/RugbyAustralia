@@ -65,9 +65,10 @@ namespace RugbyAustralia.DomainModel
         }
         public void ExportData()
         {
-            _fixtureDtos.ToList().ForEach(x => _fixtureRepository.Insert(FixtureMapper.Map(x)));
-            _playerDtos.ToList().ForEach(x => _playerRepository.Insert(PlayerMapper.Map(x)));
-            _eventDtos.ToList().ForEach(x => _eventRepository.Insert(EventMapper.Map(x)));
+            _playerRepository.BulkInsert(_playerDtos.ToList().Select(x => PlayerMapper.Map(x)));
+            _fixtureRepository.BulkInsert(_fixtureDtos.ToList().Select(x => FixtureMapper.Map(x)));
+            _eventRepository.BulkInsert(_eventDtos.ToList().Select(x => EventMapper.Map(x)));
+            _unitOfWork.Save();
         }
     }
 }

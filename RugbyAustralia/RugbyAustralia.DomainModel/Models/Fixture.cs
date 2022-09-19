@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace RugbyAustralia.DomainModel.Models
@@ -13,5 +15,6 @@ namespace RugbyAustralia.DomainModel.Models
         public string Fixture_Round { get; set; }
         public string Home_Team { get; set; }
         public string Away_Team { get; set; }
+        public virtual ICollection<Event> Events { get; set; }
     }
 }

@@ -10,5 +10,6 @@ namespace RugbyAustralia.DomainModel.Models
         [Key]
         public string Player_Mid {get; set;}
         public string Player_Name {get; set;}
+        public virtual ICollection<Event> Events { get; set; }
     }
 }
