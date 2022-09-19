@@ -29,7 +29,7 @@ namespace RugbyAustralia.DomainModel.Models
         public string Qualifier3 {get; set;}
         public string Qualifier4 {get; set;}
         public string Qualifier5 {get; set;}
-        public int Value {get; set;}
+        public int? Value {get; set;}
         [ForeignKey("Fixture_Id")]
         public virtual Fixture Fixture { get; set; }
         [ForeignKey("Player_Id")]
