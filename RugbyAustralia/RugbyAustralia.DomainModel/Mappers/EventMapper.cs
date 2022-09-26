@@ -21,16 +21,16 @@ namespace RugbyAustralia.DomainModel.Mappers
                 Match_Time = dto.match_time,
                 Team = dto.team,
                 Player_Id = dto.player_id,
-                Position_Number = dto.position_number,
+                Position_Number = NullableInt(dto.position_number),
                 Shirt_Number = dto.shirt_number,
                 Possession_Number = dto.possession_number,
                 Phase_Number = dto.phase_number,
                 EvEnt = dto.evnt,
-                Eventtype = dto.eventtype,
-                Eventresult = dto.eventresult,
-                Qualifier3 = dto.qualifier3,
-                Qualifier4 = dto.qualifier4,
-                Qualifier5 = dto.qualifier5,
+                Eventtype = NullableString(dto.eventtype),
+                Eventresult = NullableString(dto.eventresult),
+                Qualifier3 = NullableString(dto.qualifier3),
+                Qualifier4 = NullableString(dto.qualifier4),
+                Qualifier5 = NullableString(dto.qualifier5),
                 Value = value
             };
         }
@@ -84,6 +84,18 @@ namespace RugbyAustralia.DomainModel.Mappers
                     ops.Add(tmp);
                 s += tmp.Length;
             }
+        }
+        public static int? NullableInt (string intString){
+            if (intString.Length == 0)
+                return null;
+            return Int32.Parse(intString);
+            }
+
+        public static string NullableString(string str)
+        {
+            if (str.ToUpper() == "NA")
+                return null;
+            return str;
         }
     }
 }

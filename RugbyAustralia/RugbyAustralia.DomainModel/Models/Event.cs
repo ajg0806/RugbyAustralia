@@ -18,7 +18,7 @@ namespace RugbyAustralia.DomainModel.Models
         public int Match_Time {get; set;}
         public string Team {get; set;}
         public string Player_Id	{get; set;}
-        public string Position_Number {get; set;}
+        public int? Position_Number {get; set;}
         public int Shirt_Number {get; set;}
         public int Sequence_Number {get; set;}
         public int Possession_Number {get; set;}
