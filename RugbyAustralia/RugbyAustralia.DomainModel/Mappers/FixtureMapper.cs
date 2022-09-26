@@ -14,7 +14,7 @@ namespace RugbyAustralia.DomainModel.Mappers
                 Fixture_Mid = dto.fixture_mid,
                 Season = dto.season,
                 Competition_Name = dto.competition_name,
-                Fixture_Datetime = dto.fixture_round,
+                Fixture_Datetime = dto.fixture_datetime,
                 Fixture_Round = dto.fixture_round,
                 Home_Team = dto.home_team,
                 Away_Team = dto.away_team
