@@ -20,6 +20,7 @@ namespace RugbyAustralia.Tests
         private Mock<IPlayerRepository> _mockPlayerRepository;
         private Mock<IFixtureRepository> _mockFixtureRepository;
         private Mock<IEventRepository> _mockEventRepository;
+        private Mock<IUnitOfWork> _mockUnitOfWork;
 
         [SetUp]
         public void Setup()
@@ -31,6 +32,7 @@ namespace RugbyAustralia.Tests
             _mockEventRepository = new Mock<IEventRepository>();
             _mockFixtureRepository = new Mock<IFixtureRepository>();
             _mockPlayerRepository = new Mock<IPlayerRepository>();
+            _mockUnitOfWork = new Mock<IUnitOfWork>();
             _mockDirectoryManager.Setup(mockManager => mockManager.SetRootPath(It.IsAny<string>())).Verifiable();
             _mockDirectoryManager.Setup(mockManager => mockManager.GetRootPath()).Returns("");
             _mockDirectoryManager.Setup(mockManager => mockManager.UnzipEventsArchive()).Verifiable();
@@ -56,6 +58,7 @@ namespace RugbyAustralia.Tests
                 , _mockFixtureRepository.Object
                 , _mockPlayerRepository.Object
                 , _mockDirectoryManager.Object
+                , _mockUnitOfWork.Object
                 );
             importerExporter.ImportData();
             _mockPlayerQuery.Verify(mockPlayerQuery => mockPlayerQuery.RetrivePlayers(It.IsAny<string>()), Times.Once());
@@ -78,6 +81,7 @@ namespace RugbyAustralia.Tests
                 , _mockFixtureRepository.Object
                 , _mockPlayerRepository.Object
                 , _mockDirectoryManager.Object
+                , _mockUnitOfWork.Object
                 );
 
             importerExporter.ImportData();
@@ -110,6 +114,7 @@ namespace RugbyAustralia.Tests
                 , _mockFixtureRepository.Object
                 , _mockPlayerRepository.Object
                 , _mockDirectoryManager.Object
+                , _mockUnitOfWork.Object
                 );
 
             Assert.Throws<ArgumentNullException>(() => importerExporter.ImportData());
@@ -134,6 +139,7 @@ namespace RugbyAustralia.Tests
                 , _mockFixtureRepository.Object
                 , _mockPlayerRepository.Object
                 , _mockDirectoryManager.Object
+                , _mockUnitOfWork.Object
                 );
             importerExporter.ImportData();
             importerExporter.ExportData();

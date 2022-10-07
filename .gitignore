@@ -15,3 +15,6 @@
 /RugbyAustralia/.vs/RugbyAustralia/v16
 *.v2
 RugbyAustralia/RugbyAustralia.InfrastructureServices/app.config
+*.dll
+*.exe
+*.pdb
