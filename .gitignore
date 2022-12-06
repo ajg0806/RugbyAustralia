@@ -18,3 +18,4 @@ RugbyAustralia/RugbyAustralia.InfrastructureServices/app.config
 *.dll
 *.exe
 *.pdb
+RugbyAustralia/RugbyAustralia.Tests/bin/Debug/netcoreapp3.1/nunit_random_seed.tmp
